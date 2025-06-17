@@ -102,7 +102,7 @@ public class StreamFactoryTest {
             out.write("header", null);
         }
 
-        assertEquals("H\n", writer.toString());
+        assertEquals("H\r\n", writer.toString());
     }
 
     @Test(expected=BeanIOException.class)

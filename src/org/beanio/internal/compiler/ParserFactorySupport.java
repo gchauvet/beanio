@@ -706,6 +706,7 @@ public abstract class ParserFactorySupport extends ProcessorSupport implements P
     /**
      * Called by {@link #finalizeSegment(SegmentConfig)} to finalize segment iteration.
      * @param config the segment configuration
+     * @param property the property value
      */
     protected void finalizeSegmentIteration(SegmentConfig config, Property property) {
         Aggregation aggregation = (Aggregation) popParser();
@@ -737,6 +738,7 @@ public abstract class ParserFactorySupport extends ProcessorSupport implements P
     /**
      * Called by {@link #finalizeSegment(SegmentConfig)} to finalize the segment component.
      * @param config the segment configuration
+     * @return a propery value
      */
     protected Property finalizeSegmentMain(SegmentConfig config) {
     	Property property = null;
@@ -976,10 +978,10 @@ public abstract class ParserFactorySupport extends ProcessorSupport implements P
     
     /**
      * 
-     * @param config
-     * @param aggregation
-     * @param property
-     * @throws BeanIOConfigurationException
+     * @param config the property configuration
+     * @param aggregation the aggregator instance of descendant properties
+     * @param property the property
+     * @throws BeanIOConfigurationException if error occurs
      */
     protected void reflectAggregationType(
 		PropertyConfig config, 
@@ -1020,7 +1022,7 @@ public abstract class ParserFactorySupport extends ProcessorSupport implements P
      * @param config the record or group configuration
      * @param property the property component
      * @return the created {@link RecordAggregation}
-     * @throws BeanIOConfigurationException
+     * @throws BeanIOConfigurationException if error occors
      */
     protected RecordAggregation createRecordAggregation(PropertyConfig config, Property property) 
         throws BeanIOConfigurationException
@@ -1099,12 +1101,12 @@ public abstract class ParserFactorySupport extends ProcessorSupport implements P
     
     /**
      * 
-     * @param iteration
-     * @param property
-     * @param getter
-     * @param setter
+     * @param iteration teh iterator
+     * @param property the property
+     * @param getter getter name
+     * @param setter setter name
      * @return the reflected property type
-     * @throws BeanIOConfigurationException
+     * @throws BeanIOConfigurationException if error occors
      */
     protected Class<?> reflectCollectionType(Property iteration, Property property, 
         String getter, String setter) throws BeanIOConfigurationException {

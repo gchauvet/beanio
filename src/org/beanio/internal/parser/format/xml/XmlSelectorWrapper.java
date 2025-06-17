@@ -492,7 +492,7 @@ public class XmlSelectorWrapper extends ParserComponent implements Selector, Xml
 
     /**
      * 
-     * @param namespace
+     * @param namespace the namespace
      */
     public void setNamespace(String namespace) {
         this.namespace = namespace;
@@ -509,7 +509,7 @@ public class XmlSelectorWrapper extends ParserComponent implements Selector, Xml
 
     /**
      * 
-     * @param prefix
+     * @param prefix the prefix
      */
     public void setPrefix(String prefix) {
         this.prefix = prefix;
@@ -526,7 +526,7 @@ public class XmlSelectorWrapper extends ParserComponent implements Selector, Xml
 
     /**
      * 
-     * @param namespaceAware
+     * @param namespaceAware is namespace aware
      */
     public void setNamespaceAware(boolean namespaceAware) {
         this.namespaceAware = namespaceAware;

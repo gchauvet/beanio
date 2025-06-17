@@ -33,7 +33,7 @@ public abstract class ProcessorSupport {
     private LinkedList<ComponentConfig> configStack = new LinkedList<>();
 
     /**
-     * Processes a stream configuration.
+     * @param stream the stream configuration
      * @throws BeanIOConfigurationException if the configuration is invalid
      */
     protected void process(StreamConfig stream) throws BeanIOConfigurationException {

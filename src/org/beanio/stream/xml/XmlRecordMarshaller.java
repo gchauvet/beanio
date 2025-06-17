@@ -113,7 +113,7 @@ public class XmlRecordMarshaller implements RecordMarshaller {
      * Marshals a {@link Document}.
      * @param document the {@link Document} to marshal
      * @return the marshalled record text
-     * @throws XMLStreamException
+     * @throws XMLStreamException XML exception
      */
     protected String marshal(Document document) throws XMLStreamException {
      

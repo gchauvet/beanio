@@ -89,6 +89,8 @@ public class TemporalAccessorTypeHandler implements ConfigurableTypeHandler {
     /**
      * Used in custom type handlers defined in XML configurations to specify the actual
      * subclass of {@link TemporalAccessor} to handle.
+     * @param typeName the type name
+     * @throws ClassNotFoundException exption when type not found
      */
     @SuppressWarnings("unused")
     public void setTypeName(String typeName) throws ClassNotFoundException {

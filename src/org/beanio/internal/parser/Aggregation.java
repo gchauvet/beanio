@@ -141,7 +141,8 @@ public abstract class Aggregation extends DelegatingParser implements Property, 
     }
     
     /**
-     * @throws UnsupportedOperationException
+     * @param identifier then identifier
+     * @throws UnsupportedOperationException exception if unsupported
      */
     @Override
     public void setIdentifier(boolean identifier) {

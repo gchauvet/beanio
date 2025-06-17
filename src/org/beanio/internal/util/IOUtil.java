@@ -80,6 +80,7 @@ public class IOUtil {
      * Finds a resource on the classpath.  The resource is always loaded from
      * the root of the classpath, whether the resource name includes a
      * leading slash or not.
+     * @param classLoader classloader to use
      * @param resource the name of the resource to load
      * @return the resource URL, or <code>null</code> if the resource was not found
      * @since 1.2.1

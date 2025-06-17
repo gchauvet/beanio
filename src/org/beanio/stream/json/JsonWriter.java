@@ -33,7 +33,7 @@ public class JsonWriter extends JsonWriterSupport implements RecordWriter {
 
     /**
      * Constructs a new <code>JsonWriter</code>.
-     * @param out
+     * @param out the output writer
      */
     public JsonWriter(Writer out) {
         this(out, new JsonParserConfiguration());
@@ -41,7 +41,8 @@ public class JsonWriter extends JsonWriterSupport implements RecordWriter {
     
     /**
      * Constructs a new <code>JsonWriter</code>.
-     * @param out
+     * @param out the output writer
+     * @param config then JSON parser configuration
      */
     public JsonWriter(Writer out, JsonParserConfiguration config) {
         this.out = out;

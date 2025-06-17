@@ -26,6 +26,7 @@ public interface Iteration {
 
     /**
      * Returns the index of the current iteration relative to its parent.
+     * @param context the parsing context
      * @return the index of the current iteration
      */
     public int getIterationIndex(ParsingContext context);

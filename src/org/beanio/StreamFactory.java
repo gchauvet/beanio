@@ -272,7 +272,7 @@ public abstract class StreamFactory {
     /**
      * Loads a BeanIO mapping file, and adds the configured streams to this factory.
      * @param in the input stream to read the mapping file from
-     * @throws BeanIOException if an {@link IOException} or other fatal error is caught while reading the input stream
+     * @throws IOException if an {@link IOException} or other fatal error is caught while reading the input stream
      * @throws BeanIOConfigurationException if the mapping file is invalid
      */
     public void load(InputStream in) throws IOException, BeanIOConfigurationException {
@@ -283,7 +283,7 @@ public abstract class StreamFactory {
      * Loads a BeanIO mapping file, and adds the configured streams to this factory.
      * @param in the input stream to read the mapping file from
      * @param properties user {@link Properties} for property substitution
-     * @throws BeanIOException if an {@link IOException} or other fatal error is caught while reading the input stream
+     * @throws IOException if an {@link IOException} or other fatal error is caught while reading the input stream
      * @throws BeanIOConfigurationException if the mapping file is invalid
      */
     public abstract void load(InputStream in, Properties properties) throws IOException, BeanIOConfigurationException;

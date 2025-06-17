@@ -106,7 +106,7 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the minimum expected length of the field text.
+     * @param n the minimum expected length of the field text
      * @return this {@link FieldBuilder}
      */
     public FieldBuilder minLength(int n) {
@@ -115,8 +115,8 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the maximum expected length of the field text.
-     * @return this {@link FieldBuilder}
+     * @param n the maximum expected length of the field text
+     * @return a {@link FieldBuilder}
      */
     public FieldBuilder maxLength(int n) {
         config.setMaxLength(n);
@@ -124,7 +124,7 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the regular expression the field text must match.
+     * @param pattern the regular expression the field text must match
      * @return this {@link FieldBuilder}
      */
     public FieldBuilder regex(String pattern) {
@@ -133,7 +133,7 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the literal text the field text must match.
+     * @param literal the literal text the field text must match
      * @return this {@link FieldBuilder}
      */
     public FieldBuilder literal(String literal) {
@@ -142,7 +142,7 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the default value of this field.
+     * @param value the default value of this field
      * @return this {@link FieldBuilder}
      */
     public FieldBuilder defaultValue(String value) {
@@ -151,8 +151,7 @@ public class FieldBuilder extends PropertyBuilderSupport<FieldBuilder> {
     }
     
     /**
-     * Sets the pattern used to format this field by the type handler.
-     * @param pattern the pattern
+     * @param pattern the pattern used to format this field by the type handler
      * @return this {@link FieldBuilder}
      */
     public FieldBuilder format(String pattern) {

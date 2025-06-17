@@ -50,7 +50,7 @@ public class FlatPreprocessor extends Preprocessor {
     
     /**
      * Constructs a new <code>FlatPreprocessor</code>.
-     * @param stream
+     * @param stream stream configuration
      */
     public FlatPreprocessor(StreamConfig stream) {
         super(stream);
