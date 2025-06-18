@@ -3,7 +3,7 @@
 .classpath
 .settings
 .project
-.gradle
+/target
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -17,3 +17,4 @@
 hs_err_pid*
 /build/
 /classes/
+/nb-configuration.xml

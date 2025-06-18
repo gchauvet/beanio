@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
   
   <import resource="classpath:org/beanio/parser/imports/import_mapping2.xml" />
-  <import resource="file:test/org/beanio/parser/imports/import_mapping3.xml" />
+  <import resource="file:src/test/resources/org/beanio/parser/imports/import_mapping3.xml" />
 
   <typeHandler type="date" class="org.beanio.types.DateTypeHandler">
     <property name="pattern" value="yyyy-MM-dd" />

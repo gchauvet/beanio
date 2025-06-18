@@ -183,7 +183,7 @@ public class TemporalAccessorTypeHandlerTest {
         Object read = reader.read();
 
         // Then
-        assertEquals("14/03, 21:40\n", writer.toString());
+        assertEquals("14/03, 21:40" + System.getProperty("line.separator"), writer.toString());
         assertTrue(read instanceof JavaTime);
         assertEquals(LocalDate.of(2021, 3, 14), ((JavaTime) read).getLocalDate());
     }

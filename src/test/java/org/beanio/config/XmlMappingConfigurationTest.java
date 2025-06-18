@@ -129,7 +129,7 @@ public class XmlMappingConfigurationTest extends ParserTest {
      * @throws IOException
      */
     private void loadInvalidMappingFile(String name, String errorMessage) throws IOException {
-        StreamFactory factory = StreamFactory.newInstance();
+        StreamFactory factory = StreamFactory.newInstance(getClass().getClassLoader());
         InputStream in = getClass().getResourceAsStream(name);
         try {
             factory.load(in);

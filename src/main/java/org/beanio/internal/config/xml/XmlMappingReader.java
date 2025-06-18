@@ -112,15 +112,7 @@ public class XmlMappingReader {
      * @return the new <code>DocumentBuilderFactory</code>
      */
     protected DocumentBuilderFactory createDocumentBuilderFactory() {
-        @SuppressWarnings("java:S2755")
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-        try {
-            factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
-            factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
-        } catch (IllegalArgumentException e) {
-            // JAXP version older than 1.5
-        }
 
         factory.setIgnoringComments(true);
         factory.setCoalescing(true);

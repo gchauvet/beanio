@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
   
-  <import resource="file:test/org/beanio/parser/imports/import_mapping3.xml" />
+  <import resource="file:src/test/resources/org/beanio/parser/imports/import_mapping3.xml" />
 
   <typeHandler name="name" class="org.beanio.types.StringTypeHandler">
     <property name="trim" value="true" />

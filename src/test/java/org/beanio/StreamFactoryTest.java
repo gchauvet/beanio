@@ -37,7 +37,7 @@ public class StreamFactoryTest {
     public void testLoadMappingFile() throws Exception {
         StreamFactory factory = StreamFactory.newInstance();
         
-        String filename = "test/org/beanio/mapping.xml";
+        String filename = "src/test/resources/org/beanio/mapping.xml";
         File file = new File(filename);
         factory.load(file);
         factory.load(filename);
@@ -47,7 +47,7 @@ public class StreamFactoryTest {
     @Test(expected=BeanIOException.class)
     public void testMappingFileNotFound() {
         StreamFactory factory = StreamFactory.newInstance();
-        factory.load("/org/beanio/mapping-notfound.xml");
+        factory.load("mapping-notfound.xml");
     }
     
     @Test
@@ -85,7 +85,7 @@ public class StreamFactoryTest {
         StreamFactory factory = StreamFactory.newInstance();
         factory.loadResource("org/beanio/mapping.xml");
         
-        File file = new File("test/org/beanio/file.txt");
+        File file = new File("src/test/resources/org/beanio/file.txt");
         try (BeanReader in = factory.createReader("stream1", file)) {
             while (in.read() != null);
         }
@@ -102,7 +102,7 @@ public class StreamFactoryTest {
             out.write("header", null);
         }
 
-        assertEquals("H\n", writer.toString());
+        assertEquals("H" + System.getProperty("line.separator"), writer.toString());
     }
 
     @Test(expected=BeanIOException.class)
