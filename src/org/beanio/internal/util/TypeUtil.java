@@ -98,9 +98,9 @@ public class TypeUtil {
     
     /**
      * Returns the <code>Class</code> object for a class name or type alias.  A type alias is not
-     * case sensitive.  The following type aliases are supported:
+     * case sensitive.
      * <table>
-     * <caption></caption>
+     * <caption>Type aliases supported</caption>
      * <tr><th>Alias</th><th>Class or Primitive</th></tr>
      * <tr><td>string</td><td>java.lang.String</td></tr>
      * <tr><td>boolean</td><td>java.lang.Boolean</td></tr>
@@ -195,9 +195,9 @@ public class TypeUtil {
     
     /**
      * Returns the collection <code>Class</code> object for a collection class name or type alias.
-     * A type alias is not case sensitive.  The following collection type aliases are supported:
+     * A type alias is not case sensitive.
      * <table>
-     * <caption></caption>
+     * <caption>collection type aliases supported</caption>
      * <tr><th>Alias</th><th>Class or Primitive</th></tr>
      * <tr><td>array</td><td>Java Array</td></tr>
      * <tr><td>list</td><td>java.util.ArrayList</td></tr>

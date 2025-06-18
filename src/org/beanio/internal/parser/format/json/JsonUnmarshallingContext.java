@@ -61,8 +61,8 @@ public class JsonUnmarshallingContext extends UnmarshallingContext {
     
     /**
      * 
-     * @param node
-     * @return
+     * @param node then json node
+     * @return object at current stack
      */
     public Object getValue(JsonNode node) {
         String fieldName = node.getJsonName();
@@ -98,9 +98,9 @@ public class JsonUnmarshallingContext extends UnmarshallingContext {
     
     /**
      * 
-     * @param node
-     * @param validate
-     * @return
+     * @param node the json node
+     * @param validate if validated
+     * @return object pushed
      */
     public Object push(JsonNode node, boolean validate) {
         
@@ -150,7 +150,7 @@ public class JsonUnmarshallingContext extends UnmarshallingContext {
     
     /**
      * 
-     * @return
+     * @return object in stack
      */
     public Object pop() {
         return valueStack[depth--];

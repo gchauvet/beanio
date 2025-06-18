@@ -6,7 +6,7 @@ public class ReplicatorTest {
     private static Replicator replicator;
     
     /**
-     * @param args
+     * @param args arguments
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public static void main(String[] args) {

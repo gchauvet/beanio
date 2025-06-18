@@ -24,9 +24,8 @@ import org.w3c.dom.Document;
  * Factory interface for creating record parsers.
  * 
  * <p>The Java object bound to a <i>record</i> depends on the stream format.
- * The following table shows the object used for each format:</p>
  * <table>
- * <caption></caption>
+ * <caption>the object used for each format</caption>
  * <tr>
  *   <th>Format</th>
  *   <th>Record Type</th>
@@ -45,9 +44,8 @@ import org.w3c.dom.Document;
  * </tr>
  * </table>
  * 
- * <p>The following table shows the method invoked for a requested BeanIO interface.</p>
  * <table>
- * <caption></caption>
+ * <caption>the method invoked for a requested BeanIO interface</caption>
  * <tr>
  *   <th>Requests For</th>
  *   <th>Invokes</th>

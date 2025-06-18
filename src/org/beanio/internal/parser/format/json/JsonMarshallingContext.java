@@ -53,7 +53,7 @@ public class JsonMarshallingContext extends MarshallingContext {
 
     /**
      * 
-     * @param type
+     * @param type the json node type
      */
     public void push(JsonNode type) {
         Object value;
@@ -80,8 +80,8 @@ public class JsonMarshallingContext extends MarshallingContext {
     
     /**
      * 
-     * @param type
-     * @param value
+     * @param type the json node type
+     * @param value the value
      */
     @SuppressWarnings("unchecked")
     public void put(JsonNode type, Object value) {

@@ -52,8 +52,8 @@ public class TargetTest extends ParserTest {
         assertEquals("kevo", list.get(1));
         assertEquals("N,,kev,kevo", marshaller.marshal(list).toString());
         
-        Integer age = (Integer) unmarshaller.unmarshal("A,jen,28");
-        assertEquals(new Integer(28), age);
+        int age = (Integer) unmarshaller.unmarshal("A,jen,28");
+        assertEquals(28, age);
         assertEquals("A,unknown,28", marshaller.marshal(age).toString());
     }
     

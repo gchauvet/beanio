@@ -190,6 +190,7 @@ public class CollectionParser extends Aggregation {
     
     /**
      * Returns whether this iteration contained invalid values when last unmarshalled.
+     * @param context the parsing context
      * @return true if this iteration contained invalid values
      */
     protected boolean isInvalid(ParsingContext context) {
@@ -198,6 +199,7 @@ public class CollectionParser extends Aggregation {
     
     /**
      * Returns the collection value being parsed.
+     * @param context then parsing context
      * @return the {@link Collection}
      */
     @SuppressWarnings("unchecked")

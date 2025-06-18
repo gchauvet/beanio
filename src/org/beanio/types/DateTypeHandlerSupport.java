@@ -60,7 +60,7 @@ public abstract class DateTypeHandlerSupport extends LocaleSupport implements Co
      * Parses text into a {@link Date}.
      * @param text the text to parse
      * @return the parsed {@link Date}
-     * @throws TypeConversionException
+     * @throws TypeConversionException exception when conversion type fail
      */
     protected Date parseDate(String text) throws TypeConversionException {
         if ("".equals(text))

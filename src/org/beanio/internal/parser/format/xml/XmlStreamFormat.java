@@ -81,6 +81,7 @@ public class XmlStreamFormat extends StreamFormatSupport {
     
     /**
      * Creates a DOM made up of any group nodes in the parser tree.
+     * @param layout the layout
      * @return the new {@link Document} made up of group nodes
      */
     protected Document createBaseDocument(Selector layout) {
@@ -97,7 +98,7 @@ public class XmlStreamFormat extends StreamFormatSupport {
 
     /**
      * 
-     * @param groupDepth
+     * @param groupDepth the group depth
      */
     public void setGroupDepth(int groupDepth) {
         this.groupDepth = groupDepth;

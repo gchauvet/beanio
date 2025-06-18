@@ -249,6 +249,7 @@ public class MapParser extends Aggregation {
     
     /**
      * Returns the map value being parsed.
+     * @param context the parsing context
      * @return the {@link Map}
      */
     @SuppressWarnings("unchecked")

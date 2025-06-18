@@ -99,7 +99,7 @@ public class CommentReader {
      * this method is called.
      * @param initialSkipLF <code>true</code> if the first line feed character read should be ignored
      * @return the number of skipped comment lines
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     public int skipComments(boolean initialSkipLF) throws IOException {
         skipLF = initialSkipLF;

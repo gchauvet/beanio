@@ -23,6 +23,7 @@ import org.junit.*;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.nio.charset.Charset;
 
 public class FixedLengthCountModeTest extends ParserTest {
 
@@ -59,7 +60,7 @@ public class FixedLengthCountModeTest extends ParserTest {
 
     @Test
     public void testByteLengthValidation() {
-        BeanReader in = factory.createReader("f", new InputStreamReader(getClass().getResourceAsStream("f.txt")));
+        BeanReader in = factory.createReader("f", new InputStreamReader(getClass().getResourceAsStream("f.txt"), Charset.forName("UTF-8")));
         try {
             // Using Shift-JIS, all japanese characters use 2 bytes. ASCII characters are 1 byte.
             // The first line is not valid, it is only 6 bytes long

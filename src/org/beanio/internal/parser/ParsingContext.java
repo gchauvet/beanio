@@ -57,6 +57,7 @@ public abstract class ParsingContext {
     /**
      * Pops the last {@link Iteration} pushed onto the stack.
      * @see #pushIteration(Iteration)
+     * @return an iterator
      */
     public Iteration popIteration() {
         Iteration iter = iterationStack.remove(iterationStack.size() - 1);

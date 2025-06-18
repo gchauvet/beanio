@@ -216,7 +216,7 @@ public class JsonFieldFormat implements FieldFormat, JsonNode {
 
     /**
      * 
-     * @param name
+     * @param name the name
      */
     public void setName(String name) {
         this.name = name;
@@ -224,7 +224,7 @@ public class JsonFieldFormat implements FieldFormat, JsonNode {
     
     /**
      * 
-     * @param lazy
+     * @param lazy the lazy state
      */
     public void setLazy(boolean lazy) {
         this.lazy = lazy;
@@ -241,7 +241,7 @@ public class JsonFieldFormat implements FieldFormat, JsonNode {
 
     /**
      * 
-     * @param nillable
+     * @param nillable the nillable flag
      */
     public void setNillable(boolean nillable) {
         this.nillable = nillable;
@@ -267,7 +267,7 @@ public class JsonFieldFormat implements FieldFormat, JsonNode {
     
     /**
      * 
-     * @param jsonName
+     * @param jsonName the json name
      */
     public void setJsonName(String jsonName) {
         this.jsonName = jsonName;
@@ -284,7 +284,7 @@ public class JsonFieldFormat implements FieldFormat, JsonNode {
 
     /**
      * 
-     * @param jsonType
+     * @param jsonType the json type
      */
     public void setJsonType(char jsonType) {
         this.jsonType = jsonType;

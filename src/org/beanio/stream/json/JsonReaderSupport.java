@@ -51,7 +51,7 @@ public abstract class JsonReaderSupport {
     /**
      * Reads the next JSON object from the stream.
      * @return the JSON object {@link Map}
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected Map<String,Object> readObject() throws IOException {
         String fieldName = null;
@@ -175,7 +175,7 @@ public abstract class JsonReaderSupport {
     /**
      * Reads a JSON array from the input stream.
      * @return the parsed JSON array
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected List<Object> readArray() throws IOException {
         List<Object> list = new ArrayList<>();
@@ -267,7 +267,7 @@ public abstract class JsonReaderSupport {
      * Parses a null, boolean or numeric value from the given text.
      * @param text the text to parse
      * @return the parsed value: either null, Boolean, Double, Long or Integer
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected Object parseValue(String text) throws IOException {
         if ("null".equals(text)) {
@@ -291,7 +291,7 @@ public abstract class JsonReaderSupport {
     /**
      * Reads a JSON string value from the input stream.
      * @return the JSON string value
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected String readString() throws IOException {
         StringBuilder text = new StringBuilder();
@@ -352,7 +352,7 @@ public abstract class JsonReaderSupport {
     /**
      * Reads a Unicode character in JSON format.
      * @return the Unicode character
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected char readUnicode() throws IOException {
         

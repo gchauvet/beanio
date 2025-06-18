@@ -34,6 +34,7 @@ public abstract class ProcessorSupport {
 
     /**
      * Processes a stream configuration.
+     * @param stream the stream configuration
      * @throws BeanIOConfigurationException if the configuration is invalid
      */
     protected void process(StreamConfig stream) throws BeanIOConfigurationException {

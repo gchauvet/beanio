@@ -36,6 +36,7 @@ public interface FieldFormat {
      * <p>Implementations should also remove any field padding before returning the text.</p>
      * 
      * @param context the {@link UnmarshallingContext} holding the record
+     * @param reportErrors reporting errors flag
      * @return the field text
      */
     public String extract(UnmarshallingContext context, boolean reportErrors);

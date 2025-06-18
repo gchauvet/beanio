@@ -53,30 +53,6 @@ public class ErrorContext implements RecordContext, Cloneable {
     }
     
     /**
-     * Returns a deep copy of this context.
-     * @return the copy
-     *
-    @SuppressWarnings("unchecked")
-    public ErrorContext copy() {
-        try {
-            ErrorContext ec = (ErrorContext) clone();
-            if (fieldMap != null)
-                ec.fieldMap = (HashMap<String, Object>) fieldMap.clone();
-            //if (collectionFieldTextMap != null)
-            //    ec.collectionFieldTextMap = (HashMap<String, List<String>>) collectionFieldTextMap.clone();
-            if (fieldErrorMap != null)
-                ec.fieldErrorMap = (HashMap<String, Collection<String>>) fieldErrorMap.clone();
-            if (recordErrors != null)
-                ec.recordErrors = (ArrayList<String>) recordErrors.clone();
-            return ec;
-        }
-        catch (CloneNotSupportedException ex) {
-            throw new IllegalStateException(ex);
-        }
-    }
-    */
-    
-    /**
      * Returns the raw text of the last record read from the record reader.
      * @return the raw text of the last record read
      */

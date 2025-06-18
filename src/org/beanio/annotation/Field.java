@@ -158,6 +158,7 @@ public @interface Field {
     /**
      * The default value for this field.  The value is parsed into a Java object
      * using the assigned type handler.
+     * @return the default value or empty otherwise
      */
     String defaultValue() default "";
     

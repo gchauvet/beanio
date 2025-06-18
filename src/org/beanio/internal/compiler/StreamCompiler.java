@@ -52,7 +52,7 @@ public class StreamCompiler {
      * Creates a new Stream from its configuration.
      * @param config the {@link StreamConfig}
      * @return the built {@link Stream} definition
-     * @throws BeanIOConfigurationException
+     * @throws BeanIOConfigurationException if error occurs
      * @since 2.0.5
      */
     public Stream build(StreamConfig config) throws BeanIOConfigurationException {

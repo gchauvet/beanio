@@ -64,7 +64,7 @@ public abstract class JsonWriterSupport {
     /**
      * Writes a {@link Map} in JSON object format.
      * @param map the Map to write
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected void write(Map<String,Object> map) throws IOException {
         ++level;
@@ -105,7 +105,7 @@ public abstract class JsonWriterSupport {
      * <code>Boolean</code>, <code>Map</code> or <code>Iterable</code> (array), or else {@link Object#toString()}
      * is called and the value is formatted as a JSON string.
      * @param value the <code>Object</code> to write
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     @SuppressWarnings("unchecked")
     protected void writeValue(Object value) throws IOException {
@@ -132,7 +132,7 @@ public abstract class JsonWriterSupport {
     /**
      * Writes a {@link String} in JSON string format.
      * @param text the {@link String} to write
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected void writeString(String text) throws IOException {
         out.write('"');
@@ -168,73 +168,9 @@ public abstract class JsonWriterSupport {
     }
     
     /**
-     * 
-     * @param list
-     * @throws IOException
-     *
-    protected void writeArray(List<Object> list) throws IOException {
-        if (list.isEmpty()) {
-            out.write("[]");
-            return;
-        }
-        
-        out.write('[');
-        
-        if (pretty) {
-            boolean updated = indentEnabled;
-            indentEnabled = false;
-            
-            // write array of objects:
-            if ((list.get(0) instanceof Map)) {
-                ++level;
-                newLine();
-                boolean comma = false;
-                for (Object value : list) {
-                    if (comma) {
-                        out.write(',');
-                        newLine();
-                    }
-                    writeValue(value);
-                    comma = true;
-                }
-                --level;
-                newLine();
-            }
-            // write array of other
-            else {
-                boolean comma = false;
-                for (Object value : list) {
-                    if (comma) {
-                        out.write(", ");
-                    }
-                    writeValue(value);
-                    comma = true;
-                }
-            }
-            
-            if (updated) {
-                indentEnabled = true;
-            }
-        }
-        else {
-            boolean comma = false;
-            for (Object value : list) {
-                if (comma) {
-                    out.write(',');
-                }
-                writeValue(value);
-                comma = true;
-            }
-        }
-        
-        out.write(']');
-    }
-    */
-
-    /**
      * Writes an {@link Iterable} in JSON array format.
      * @param iterable the {@link Iterable} to write
-     * @throws IOException
+     * @throws IOException if IO error occurs
      */
     protected void writeArray(Iterable<Object> iterable) throws IOException {
         Iterator<Object> iter = iterable.iterator();

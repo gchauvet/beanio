@@ -113,7 +113,7 @@ public class XmlRecordMarshaller implements RecordMarshaller {
      * Marshals a {@link Document}.
      * @param document the {@link Document} to marshal
      * @return the marshalled record text
-     * @throws XMLStreamException
+     * @throws XMLStreamException if XML error occurs
      */
     protected String marshal(Document document) throws XMLStreamException {
      
@@ -150,7 +150,7 @@ public class XmlRecordMarshaller implements RecordMarshaller {
      * Recursively writes an element to the XML stream writer.
      * @param element the DOM element to write
      * @param indentationEnabled set to <code>true</code> if indentation is enabled
-     * @throws XMLStreamException
+     * @throws XMLStreamException if XML error occur
      */
     private void write(XMLStreamWriter out, Element element, boolean indentationEnabled) throws XMLStreamException {
         

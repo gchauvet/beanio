@@ -64,6 +64,7 @@ public class BeanUtil {
     
     /**
      * Instantiates a bean class using its class name.
+     * @param classLoader classloader to use
      * @param className the fully qualified name of the class to instantiate
      * @return the created bean object
      */
