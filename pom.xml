@@ -107,7 +107,7 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.groupId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
-                        <Export-Package>org.beanio.*</Export-Package>
+                        <Export-Package>!org.beanio.xsd.*,org.beanio.*</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
